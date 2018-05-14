@@ -27,7 +27,7 @@ const execute = () => {
   const str = selectCrane(range, weight);
 
   const result = document.getElementById("result");
-  result.innerHTML = str.join("\n");
+  result.innerText = str.join("\n");
 };
 
 const executeButton = document.getElementById("execute_button");
