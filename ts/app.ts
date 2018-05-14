@@ -16,5 +16,19 @@ const selectCrane = (range: number, weight: number) => {
   return candidate;
 };
 
-const test = selectCrane(10, 2);
-console.log(test);
+const getNumberById = (id: string) => {
+  const element = <HTMLInputElement>document.getElementById(id);
+  return Number(element.value);
+};
+
+const execute = () => {
+  const range = getNumberById("range");
+  const weight = getNumberById("weight");
+  const str = selectCrane(range, weight);
+
+  const result = document.getElementById("result");
+  result.innerHTML = str.join("\n");
+};
+
+const executeButton = document.getElementById("execute_button");
+executeButton.onclick = execute;
