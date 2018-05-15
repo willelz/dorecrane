@@ -8,17 +8,25 @@
   </head>
 
   <body>
-    <div class="pure-form input_area">
-      <label for="range">作業半径</label>
+    <section class="pure-form input_area">
+      <label for="range">作業半径(M)</label>
       <input type="number" id="range" required>
 
-      <label for="weight">重さ</label>
+      <label for="weight">重さ(t)</label>
       <input type="number" id="weight" required>
 
       <button id="execute_button" class="pure-button">実行</button>
-    </div>
+    </section>
 
     <section id="result">
+    </section>
+
+    <section>
+      <h3>条件</h3>
+      <ui>
+        <li>アウトリガ最大張出</li>
+        <li>ブームのみ使用（ジブ未使用）</li>
+      </ui>
     </section>
     <script src="ts/app.ts"></script>
   </body>

@@ -32,7 +32,7 @@ const getNumberById = (id: string) => {
 const createTable = (sr: searchResult[]) => {
   let result: string = "";
   result +=
-    '<table class="pure-table pure-table-horizontal"><thead><tr><th>型式</th><th>作業半径(M)</th><th>重さ(t)</th></tr></thead><tbody>';
+    '<table class="pure-table pure-table-horizontal"><thead><tr><th>型式</th><th>作業半径(M)</th><th>定格総荷重(t)</th></tr></thead><tbody>';
   for (const line of sr) {
     result += `<tr><td>${line.name}</td><td>${line.range}</td><td>${
       line.weight
@@ -50,8 +50,10 @@ const execute = () => {
   const table = createTable(str);
 
   const result = document.getElementById("result");
+  if (!result) throw new Error("no result");
   result.innerHTML = table;
 };
 
 const executeButton = document.getElementById("execute_button");
+if (!executeButton) throw new Error("no executeButton");
 executeButton.onclick = execute;
