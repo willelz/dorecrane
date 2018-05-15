@@ -4,14 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start" : "parcel index.html",
-    "build": "parcel build index.html -d docs --public-url ./",
+    "start": "parcel index.html",
+    "build": "parcel build index.html -d docs --public-url ./ --no-source-maps",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "purecss": "^1.0.0",
     "ts-node": "^6.0.3"
   },
   "devDependencies": {
